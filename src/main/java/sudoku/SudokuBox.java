@@ -8,4 +8,5 @@ public class SudokuBox extends SudokuFieldGroup {
     public SudokuBox(final List<SudokuField> fields) {
         super(fields);
     }
+
 }

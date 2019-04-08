@@ -3,6 +3,11 @@ package sudoku;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
+
 public abstract class SudokuFieldGroup {
 
     public static final int SIZE = 9;
@@ -34,5 +39,20 @@ public abstract class SudokuFieldGroup {
         }
 
         return valueList;
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(fields).toHashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return new EqualsBuilder().append(fields, ((SudokuFieldGroup) obj).fields).isEquals();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this).append("fields", fields).toString();
     }
 }

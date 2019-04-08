@@ -3,6 +3,11 @@ package sudoku;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
+
 public class SudokuBoard {
 
     public static final int SIZE = 9;
@@ -65,13 +70,15 @@ public class SudokuBoard {
         return new SudokuBox(fields);
     }
 
-    private boolean checkBoard() {
+    public boolean checkBoard() {
+        boolean isCorrect = true;
         //sprawdzanie wierszy
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 for (int j2 = j + 1; j2 < 9; j2++) {
-                    if (board.get(i).get(j).getFieldValue() == board.get(i).get(j2).getFieldValue()) {
-                        return false;
+                    if (board.get(i).get(j).getFieldValue()
+                            == board.get(i).get(j2).getFieldValue()) {
+                        isCorrect = false;
                     }
                 }
             }
@@ -81,56 +88,48 @@ public class SudokuBoard {
         for (int j = 0; j < 9; j++) {
             for (int i = 0; i < 9; i++) {
                 for (int i2 = i + 1; i2 < 9; i2++) {
-                    if (board.get(i).get(j).getFieldValue() == board.get(i2).get(j).getFieldValue()) {
-                        return false;
+                    if (board.get(i).get(j).getFieldValue()
+                            == board.get(i2).get(j).getFieldValue()) {
+                        isCorrect = false;
                     }
                 }
             }
         }
 
         //sprawdzanie małych kwadratów
-        for (int I = 0; I < 3; I++) {
-            for (int J = 0; J < 3; J++) {
-                //mały kwadrat (I, J)
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                //mały kwadrat (i, j)
                 for (int checked = 0; checked < 9; checked++) {
-                    for (int compared = checked + 1; compared < 9; compared++) {
-                        if (board.get(I * 3 + (checked / 3)).get(J * 3 + (checked % 3)).getFieldValue() ==
-                                board.get(I * 3 + (compared / 3)).get(J * 3 + (compared % 3)).getFieldValue()) {
-                            return false;
+                    for (int compared = checked + 1;
+                         compared < 9; compared++) {
+                        if (board.get(i * 3 + (checked / 3))
+                                .get(j * 3 + (checked % 3)).getFieldValue()
+                                == board.get(i * 3 + (compared / 3))
+                                .get(j * 3 + (compared % 3)).getFieldValue()) {
+                            isCorrect = false;
                         }
                     }
                 }
             }
         }
 
-        return true;
+        return isCorrect;
     }
 
     @Override
     public boolean equals(final Object obj) {
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                if (((SudokuBoard) obj).get(i, j) != get(i, j)) {
-                    return false;
-                }
-            }
-        }
-        return true;
+        return new EqualsBuilder().append(board, ((SudokuBoard) obj).board).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return new HashCodeBuilder(17, 37)
+                .append(board).toHashCode();
     }
 
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < SudokuBoard.SIZE; i++) {
-            result.append(getRow(i).getFields());
-            result.append("\n");
-        }
-
-        return result.toString();
+        return new ToStringBuilder(this).append("board", board).toString();
     }
 }

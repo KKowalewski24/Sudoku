@@ -1,6 +1,5 @@
 package sudoku;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -16,14 +15,6 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
         }
 
         for (int i = 0; i < SudokuBoard.NUMBER_OF_CELLS; i++) {
-
-            /////////////////////////////////////////////
-            /*System.out.println();
-            System.out.println("i = " + i );
-            System.out.println(board.toString());
-            System.out.println();*/
-            /////////////////////////////////////////////
-
             int rowNumber = i / SudokuBoard.SIZE;
             int columnNumber = i % SudokuBoard.SIZE;
 
@@ -38,7 +29,8 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
                         flagOK = true;
                         break;
                     }
-                    board.set(rowNumber, columnNumber, (board.get(rowNumber, columnNumber) % 9 + 1));
+                    board.set(rowNumber, columnNumber,
+                            (board.get(rowNumber, columnNumber) % 9 + 1));
                 } while (board.get(rowNumber, columnNumber) != startNumbers.get(i));
 
             } else {
@@ -49,7 +41,8 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
                         flagOK = true;
                         break;
                     }
-                    board.set(rowNumber, columnNumber, (board.get(rowNumber, columnNumber) % 9 + 1));
+                    board.set(rowNumber, columnNumber,
+                            (board.get(rowNumber, columnNumber) % 9 + 1));
                 }
             }
 
