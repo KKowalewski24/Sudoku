@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 public class SudokuFieldGroupTest {
 
     private SudokuRow makeObjectWithValidList() {
-        SudokuRow sudokuRow = new SudokuRow(Arrays.asList(
+        return new SudokuRow(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),
                 new SudokuField(3),
@@ -22,8 +22,6 @@ public class SudokuFieldGroupTest {
                 new SudokuField(7),
                 new SudokuField(8),
                 new SudokuField(9)));
-
-        return sudokuRow;
     }
 
     @Test
@@ -77,7 +75,7 @@ public class SudokuFieldGroupTest {
     @Test
     public void toStringTest() {
         SudokuRow sudokuRow = makeObjectWithValidList();
-        assertEquals(sudokuRow.toString(), sudokuRow.toString());
+        assertNotNull(sudokuRow.toString());
     }
 
     @Test
@@ -93,6 +91,6 @@ public class SudokuFieldGroupTest {
         SudokuRow sudokuRow = makeObjectWithValidList();
         SudokuRow sudokuRowSecond = makeObjectWithValidList();
 
-        assertTrue(sudokuRow.hashCode() == sudokuRowSecond.hashCode());
+        assertEquals(sudokuRow.hashCode(), sudokuRowSecond.hashCode());
     }
 }

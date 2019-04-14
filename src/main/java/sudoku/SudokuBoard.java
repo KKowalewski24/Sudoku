@@ -15,6 +15,9 @@ public class SudokuBoard {
 
     private List<List<SudokuField>> board;
 
+    /**
+     * Constructor of the class.
+     */
     public SudokuBoard() {
         //PRZYPISYWANIE DO REFERENCJI PIERSZEGO WYMIARU MACIERZY
         board = Arrays.asList(new List[SIZE]);
@@ -40,6 +43,12 @@ public class SudokuBoard {
         this.board.get(i).get(j).setFieldValue(value);
     }
 
+    /**
+     * Return a chosen row of matrix.
+     *
+     * @param row number of chosen row
+     * @return
+     */
     public SudokuRow getRow(int row) {
         List<SudokuField> fields = Arrays.asList(new SudokuField[SudokuFieldGroup.SIZE]);
         for (int i = 0; i < SIZE; i++) {
@@ -49,6 +58,12 @@ public class SudokuBoard {
         return new SudokuRow(fields);
     }
 
+    /**
+     * Return a chosen column of matrix.
+     *
+     * @param column number of chosen column
+     * @return
+     */
     public SudokuColumn getColumn(int column) {
         List<SudokuField> fields = Arrays.asList(new SudokuField[SudokuFieldGroup.SIZE]);
         for (int i = 0; i < SIZE; i++) {
@@ -58,6 +73,13 @@ public class SudokuBoard {
         return new SudokuColumn(fields);
     }
 
+    /**
+     * Return a chosen small square of matrix.
+     *
+     * @param rowIndex    number of chosen row
+     * @param columnIndex number of chosen column
+     * @return
+     */
     public SudokuBox getBox(int rowIndex, int columnIndex) {
         List<SudokuField> fields = Arrays.asList(new SudokuField[SudokuFieldGroup.SIZE]);
         int index = 0;
@@ -70,6 +92,11 @@ public class SudokuBoard {
         return new SudokuBox(fields);
     }
 
+    /**
+     * Check if board is correct.
+     *
+     * @return
+     */
     public boolean checkBoard() {
         boolean isCorrect = true;
         //sprawdzanie wierszy

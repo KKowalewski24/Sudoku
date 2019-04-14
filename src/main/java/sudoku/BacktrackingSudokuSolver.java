@@ -5,7 +5,11 @@ import java.util.List;
 import java.util.Random;
 
 public class BacktrackingSudokuSolver implements SudokuSolver {
-
+    /**
+     * Method solve the sudoku.
+     *
+     * @param board it is object of SudokuBoard class
+     */
     public void solve(final SudokuBoard board) {
         Random rand = new Random();
         //TWORZENIE LISTY + INICJALIZACJA ZEREM

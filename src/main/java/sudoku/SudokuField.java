@@ -19,6 +19,11 @@ public class SudokuField {
         return this.value;
     }
 
+    /**
+     * Method set value of the chosen field.
+     *
+     * @param value It it value that chosen field will be assigned
+     */
     public void setFieldValue(int value) {
         if (value < 0 || value > 9) {
             throw new BadFieldValueException("Must be <1,9>");

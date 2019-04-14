@@ -50,7 +50,7 @@ public class SudokuBoardTest {
 
     @Test
     public void toStringTest() {
-        assertEquals(sudokuBoard.toString(), sudokuBoard.toString());
+        assertNotNull(sudokuBoard.toString());
     }
 
     @Test
@@ -63,6 +63,6 @@ public class SudokuBoardTest {
     @Test
     public void hashCodeTest() {
         sudokuBoardSecond = new SudokuBoard();
-        assertTrue(sudokuBoard.hashCode() == sudokuBoardSecond.hashCode());
+        assertEquals(sudokuBoard.hashCode(), sudokuBoardSecond.hashCode());
     }
 }

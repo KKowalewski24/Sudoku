@@ -13,6 +13,11 @@ public abstract class SudokuFieldGroup {
     public static final int SIZE = 9;
     private List<SudokuField> fields;
 
+    /**
+     * Constructor of the class.
+     *
+     * @param fields list of the SudokuField objects
+     */
     public SudokuFieldGroup(final List<SudokuField> fields) {
         if (fields.size() != SIZE) {
             throw new BadGroupSizeException("Length must be 9");
@@ -20,6 +25,11 @@ public abstract class SudokuFieldGroup {
         this.fields = fields;
     }
 
+    /**
+     * Method verify correctness.
+     *
+     * @return
+     */
     public boolean verify() {
         for (int i = 0; i < 9; i++) {
             for (int i2 = i + 1; i2 < 9; i2++) {
@@ -32,6 +42,11 @@ public abstract class SudokuFieldGroup {
         return true;
     }
 
+    /**
+     * Method return list of fields.
+     *
+     * @return
+     */
     public List<Integer> getFields() {
         List<Integer> valueList = new ArrayList<>();
         for (int i = 0; i < SIZE; i++) {

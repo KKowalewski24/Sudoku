@@ -37,7 +37,7 @@ public class SudokuFieldTest {
 
     @Test
     public void toStringTest() {
-        assertEquals(sudokuField.toString(), sudokuField.toString());
+        assertNotNull(sudokuField.toString());
     }
 
     @Test
@@ -50,7 +50,7 @@ public class SudokuFieldTest {
     @Test
     public void hashCodeTest() {
         sudokuFieldSecond = new SudokuField();
-        assertTrue(sudokuField.hashCode() == sudokuFieldSecond.hashCode());
+        assertEquals(sudokuField.hashCode(), sudokuFieldSecond.hashCode());
     }
 
 }
