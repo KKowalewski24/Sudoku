@@ -6,7 +6,7 @@ level of difficulty, changing language, saving to file, saving to DB and load th
 from file or from DB. Game can be paused whenever a user want to do it and save current 
 progress to file or DB and again load data to continue started game.
 
-Technologies used in project:
+### Technologies used in project
 * Maven - Project Management
 * Java SE JDK 8
 * Java FX && SceneBuilder
