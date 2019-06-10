@@ -3,12 +3,15 @@ package sudoku;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class BacktrackingSudokuSolverTest {
+
+    /*------------------------ FIELDS REGION ------------------------*/
     private SudokuBoard sudokuBoard;
     private BacktrackingSudokuSolver solver;
 
+    /*------------------------ METHODS REGION ------------------------*/
     @Before
     public void setUp() {
         sudokuBoard = new SudokuBoard();
@@ -58,7 +61,6 @@ public class BacktrackingSudokuSolverTest {
         return true;
     }
 
-    //czy fillBoard generuje poprawny układ liczb na planszy
     @Test
     public void solveTest() {
         solver.solve(sudokuBoard);
@@ -68,8 +70,6 @@ public class BacktrackingSudokuSolverTest {
         assertTrue(checkSmallSquares(sudokuBoard));
     }
 
-    //czy dwa kolejne wywołania fillBoard generują
-    //inny układ liczb na planszy
     @Test
     public void solveRepeatTest() {
         SudokuBoard obj1 = new SudokuBoard();

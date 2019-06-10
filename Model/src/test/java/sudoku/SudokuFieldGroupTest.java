@@ -1,16 +1,21 @@
 package sudoku;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.junit.Test;
+import sudoku.exception.BadGroupSizeException;
 
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 public class SudokuFieldGroupTest {
 
+    /*------------------------ METHODS REGION ------------------------*/
     private SudokuRow makeObjectWithValidList() {
         return new SudokuRow(Arrays.asList(
                 new SudokuField(1),
@@ -92,5 +97,13 @@ public class SudokuFieldGroupTest {
         SudokuRow sudokuRowSecond = makeObjectWithValidList();
 
         assertEquals(sudokuRow.hashCode(), sudokuRowSecond.hashCode());
+    }
+
+    @Test(expected = UnsupportedOperationException.class)
+    public void getSudokuFieldListTest() {
+        SudokuRow sudokuRow = makeObjectWithValidList();
+        SudokuField sudokuField = new SudokuField(3);
+        List<SudokuField> fields = sudokuRow.getSudokuFieldList();
+        fields.set(1, sudokuField);
     }
 }
