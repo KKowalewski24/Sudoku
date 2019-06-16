@@ -12,4 +12,5 @@ progress to file or DB and again load data to continue started game.
 * Java FX && SceneBuilder
 * SQLite - JDBC
 * JUnit 4
-
+* JaCoCo
+* Checkstyle
