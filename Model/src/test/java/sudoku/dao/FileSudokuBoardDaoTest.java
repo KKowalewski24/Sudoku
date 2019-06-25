@@ -1,5 +1,9 @@
 package sudoku.dao;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 import org.apache.commons.lang3.SystemUtils;
 import org.junit.Test;
 import sudoku.board.SudokuBoard;
@@ -20,17 +24,20 @@ public class FileSudokuBoardDaoTest {
 
     /*------------------------ METHODS REGION ------------------------*/
     @Test
-    public void writeReadTest() throws DaoException {
+    public void writeReadTest() throws IOException {
         fileSudokuBoardDao = factory.getFileDao("xxx.txt");
         fileSudokuBoardDao.write(sudokuBoard);
         sudokuBoardSecond = fileSudokuBoardDao.read();
 
         assertEquals(sudokuBoard, sudokuBoardSecond);
+
+        Files.deleteIfExists(Paths.get("xxx.txt"));
     }
 
     @Test(expected = FileOperationException.class)
-    public void readIOExceptionTest() throws DaoException {
-        fileSudokuBoardDao = factory.getFileDao("yyy.txt");
+    public void readIOExceptionTest() throws IOException {
+        Files.deleteIfExists(Paths.get("xxx.txt"));
+        fileSudokuBoardDao = factory.getFileDao("xxx.txt");
         fileSudokuBoardDao.read();
     }
 
