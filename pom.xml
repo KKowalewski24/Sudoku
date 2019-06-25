@@ -17,7 +17,7 @@
     </modules>
 
     <properties>
-        <main.class>sudoku.App</main.class>
+        <main.class>sudoku.controller.App</main.class>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>

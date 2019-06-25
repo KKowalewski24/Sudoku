@@ -1,4 +1,4 @@
-package sudoku;
+package sudoku.utils;
 
 import java.util.ResourceBundle;
 import org.junit.Before;
@@ -9,6 +9,7 @@ import sudoku.exception.UnknownLevelException;
 
 import static org.junit.Assert.assertEquals;
 import sudoku.solver.BacktrackingSudokuSolver;
+import sudoku.utils.DifficultyLevel;
 
 public class DifficultyLevelTest {
 

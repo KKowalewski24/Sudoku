@@ -1,4 +1,4 @@
-package sudoku;
+package sudoku.utils;
 
 import java.util.HashSet;
 import java.util.Random;

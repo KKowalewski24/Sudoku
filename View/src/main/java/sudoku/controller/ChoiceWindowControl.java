@@ -1,9 +1,10 @@
-package sudoku;
+package sudoku.controller;
 
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -13,6 +14,8 @@ import sudoku.board.SudokuBoard;
 import sudoku.dao.Dao;
 import sudoku.dao.SudokuBoardDaoFactory;
 import sudoku.exception.DaoException;
+import sudoku.utils.FxmlStageSetup;
+import sudoku.utils.PopOutWindow;
 
 public class ChoiceWindowControl {
 

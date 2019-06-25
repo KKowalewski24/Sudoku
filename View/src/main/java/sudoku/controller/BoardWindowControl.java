@@ -1,8 +1,9 @@
-package sudoku;
+package sudoku.controller;
 
 import java.io.File;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -16,6 +17,9 @@ import sudoku.dao.SudokuBoardDaoFactory;
 import sudoku.exception.DaoException;
 import sudoku.exception.EmptyBoardException;
 import sudoku.solver.BacktrackingSudokuSolver;
+import sudoku.utils.DifficultyLevel;
+import sudoku.utils.FxmlStageSetup;
+import sudoku.utils.PopOutWindow;
 
 public class BoardWindowControl {
 

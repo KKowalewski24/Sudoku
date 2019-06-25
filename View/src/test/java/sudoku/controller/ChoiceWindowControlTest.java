@@ -1,9 +1,10 @@
-package sudoku;
+package sudoku.controller;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import sudoku.controller.ChoiceWindowControl;
 
 public class ChoiceWindowControlTest {
 

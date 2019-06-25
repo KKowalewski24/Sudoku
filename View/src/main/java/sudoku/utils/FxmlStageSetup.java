@@ -1,4 +1,4 @@
-package sudoku;
+package sudoku.utils;
 
 import java.io.IOException;
 import java.util.ResourceBundle;

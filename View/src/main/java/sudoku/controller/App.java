@@ -1,11 +1,13 @@
-package sudoku;
+package sudoku.controller;
 
 import java.io.IOException;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import sudoku.exception.DatabaseException;
+import sudoku.utils.FxmlStageSetup;
 
 public class App extends Application {
 

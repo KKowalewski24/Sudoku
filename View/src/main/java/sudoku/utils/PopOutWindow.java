@@ -1,4 +1,4 @@
-package sudoku;
+package sudoku.utils;
 
 import javafx.scene.control.Alert;
 
