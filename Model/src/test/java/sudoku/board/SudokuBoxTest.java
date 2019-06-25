@@ -1,19 +1,21 @@
-package sudoku;
+package sudoku.board;
 
 import java.util.Arrays;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
+import sudoku.board.SudokuBox;
+import sudoku.board.SudokuField;
 
-public class SudokuColumnTest {
+public class SudokuBoxTest {
 
     /*------------------------ FIELDS REGION ------------------------*/
-    private SudokuColumn sudokuColumn;
-    private SudokuColumn sudokuColumnSecond;
+    private SudokuBox sudokuBox;
+    private SudokuBox sudokuBoxSecond;
 
     /*------------------------ METHODS REGION ------------------------*/
-    private SudokuColumn makeObjectWithValidList() {
-        return new SudokuColumn(Arrays.asList(
+    private SudokuBox makeObjectWithValidList() {
+        return new SudokuBox(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),
                 new SudokuField(3),
@@ -27,10 +29,10 @@ public class SudokuColumnTest {
 
     @Test
     public void CloneTest() throws CloneNotSupportedException {
-        sudokuColumn = makeObjectWithValidList();
-        sudokuColumnSecond = (SudokuColumn) sudokuColumn.clone();
+        sudokuBox = makeObjectWithValidList();
+        sudokuBoxSecond = (SudokuBox) sudokuBox.clone();
 
-        assertTrue(sudokuColumn.equals(sudokuColumnSecond)
-                && sudokuColumnSecond.equals(sudokuColumn));
+        assertTrue(sudokuBox.equals(sudokuBoxSecond)
+                && sudokuBoxSecond.equals(sudokuBox));
     }
 }

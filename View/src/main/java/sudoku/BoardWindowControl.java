@@ -10,8 +10,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
+import sudoku.board.SudokuBoard;
+import sudoku.dao.Dao;
+import sudoku.dao.SudokuBoardDaoFactory;
 import sudoku.exception.DaoException;
 import sudoku.exception.EmptyBoardException;
+import sudoku.solver.BacktrackingSudokuSolver;
 
 public class BoardWindowControl {
 

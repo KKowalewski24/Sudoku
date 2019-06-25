@@ -1,4 +1,4 @@
-package sudoku;
+package sudoku.board;
 
 import java.io.Serializable;
 import java.util.ResourceBundle;
@@ -12,7 +12,7 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
     /*------------------------ FIELDS REGION ------------------------*/
     private int value;
     private boolean isEmptyField;
-    private ResourceBundle listBundle = ResourceBundle.getBundle("sudoku.Language");
+    private ResourceBundle listBundle = ResourceBundle.getBundle("sudoku.bundle.Language");
 
     /*------------------------ METHODS REGION ------------------------*/
     public SudokuField() {

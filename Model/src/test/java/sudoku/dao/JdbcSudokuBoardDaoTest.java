@@ -1,10 +1,13 @@
-package sudoku;
+package sudoku.dao;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import org.apache.commons.lang3.SystemUtils;
 import org.junit.Test;
+import sudoku.board.SudokuBoard;
+import sudoku.dao.Dao;
+import sudoku.dao.SudokuBoardDaoFactory;
 import sudoku.exception.DaoException;
 import sudoku.exception.DatabaseException;
 

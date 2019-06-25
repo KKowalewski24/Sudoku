@@ -1,8 +1,9 @@
-package sudoku;
+package sudoku.dao;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
+import sudoku.dao.SudokuBoardDaoFactory;
 
 public class SudokuBoardDaoFactoryTest {
 

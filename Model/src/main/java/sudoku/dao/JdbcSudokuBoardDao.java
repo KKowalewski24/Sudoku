@@ -1,4 +1,4 @@
-package sudoku;
+package sudoku.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import sudoku.board.SudokuBoard;
 import sudoku.exception.DatabaseException;
 
 /*NICE TUTORIAL FOR JDBC http://www.sqlitetutorial.net/sqlite-java/ */

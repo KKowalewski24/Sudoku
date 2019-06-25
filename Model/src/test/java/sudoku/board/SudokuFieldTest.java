@@ -1,7 +1,8 @@
-package sudoku;
+package sudoku.board;
 
 import org.junit.Before;
 import org.junit.Test;
+import sudoku.board.SudokuField;
 import sudoku.exception.BadFieldValueException;
 
 import static org.junit.Assert.assertEquals;

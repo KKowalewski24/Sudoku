@@ -1,4 +1,4 @@
-package sudoku;
+package sudoku.board;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public abstract class SudokuFieldGroup implements Cloneable, Serializable {
     /*------------------------ FIELDS REGION ------------------------*/
     public static final int SIZE = 9;
     private List<SudokuField> fields;
-    private ResourceBundle listBundle = ResourceBundle.getBundle("sudoku.Language");
+    private ResourceBundle listBundle = ResourceBundle.getBundle("sudoku.bundle.Language");
 
     /*------------------------ METHODS REGION ------------------------*/
 

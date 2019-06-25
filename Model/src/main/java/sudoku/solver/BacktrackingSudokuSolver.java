@@ -1,8 +1,10 @@
-package sudoku;
+package sudoku.solver;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+
+import sudoku.board.SudokuBoard;
 
 public class BacktrackingSudokuSolver implements SudokuSolver {
     /**

@@ -9,6 +9,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.stage.FileChooser;
+import sudoku.board.SudokuBoard;
+import sudoku.dao.Dao;
+import sudoku.dao.SudokuBoardDaoFactory;
 import sudoku.exception.DaoException;
 
 public class ChoiceWindowControl {

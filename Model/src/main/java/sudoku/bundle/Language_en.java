@@ -1,16 +1,16 @@
-package sudoku;
+package sudoku.bundle;
 
 import java.io.Serializable;
 import java.util.ListResourceBundle;
 
-public class Language_pl extends ListResourceBundle implements Serializable {
+public class Language_en extends ListResourceBundle implements Serializable {
 
     /*------------------------ METHODS REGION ------------------------*/
     @Override
     protected Object[][] getContents() {
         return new Object[][]{
-                {"_wrongFieldValue", "Musi być <1,9>"},
-                {"_wrongLength", "Dlugość musi byc rowna 9"}
+                {"_wrongFieldValue", "Must be <1,9>"},
+                {"_wrongLength", "Length must be equals 9"}
         };
     }
 }

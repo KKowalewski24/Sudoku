@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.Set;
+
+import sudoku.board.SudokuBoard;
 import sudoku.exception.EmptyBoardException;
 import sudoku.exception.UnknownLevelException;
 

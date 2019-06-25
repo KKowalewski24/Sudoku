@@ -1,9 +1,12 @@
-package sudoku;
+package sudoku.board;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.Test;
+import sudoku.board.SudokuField;
+import sudoku.board.SudokuFieldGroup;
+import sudoku.board.SudokuRow;
 import sudoku.exception.BadGroupSizeException;
 
 import static org.hamcrest.core.Is.is;

@@ -1,4 +1,4 @@
-package sudoku;
+package sudoku.dao;
 
 import sudoku.exception.DaoException;
 

@@ -1,4 +1,4 @@
-package sudoku;
+package sudoku.board;
 
 import java.io.Serializable;
 import java.util.Arrays;

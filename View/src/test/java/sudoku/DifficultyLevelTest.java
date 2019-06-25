@@ -3,10 +3,12 @@ package sudoku;
 import java.util.ResourceBundle;
 import org.junit.Before;
 import org.junit.Test;
+import sudoku.board.SudokuBoard;
 import sudoku.exception.EmptyBoardException;
 import sudoku.exception.UnknownLevelException;
 
 import static org.junit.Assert.assertEquals;
+import sudoku.solver.BacktrackingSudokuSolver;
 
 public class DifficultyLevelTest {
 

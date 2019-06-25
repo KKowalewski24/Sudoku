@@ -1,4 +1,6 @@
-package sudoku;
+package sudoku.dao;
+
+import sudoku.board.SudokuBoard;
 
 public class SudokuBoardDaoFactory {
 
