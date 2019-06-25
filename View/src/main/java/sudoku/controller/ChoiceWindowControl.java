@@ -168,7 +168,7 @@ public class ChoiceWindowControl {
      */
     @FXML
     private void onActionButtonAuthors(ActionEvent actionEvent) {
-        ResourceBundle listBundle = ResourceBundle.getBundle("sudoku.Authors");
+        ResourceBundle listBundle = ResourceBundle.getBundle("sudoku.bundle.Authors");
         popOutWindow.messageBox("",
                 (listBundle.getObject("1. ") + "\n" + listBundle.getObject("2. ")),
                 Alert.AlertType.INFORMATION);

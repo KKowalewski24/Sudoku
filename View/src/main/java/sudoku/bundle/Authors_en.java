@@ -1,4 +1,4 @@
-package sudoku;
+package sudoku.bundle;
 
 import java.util.ListResourceBundle;
 
